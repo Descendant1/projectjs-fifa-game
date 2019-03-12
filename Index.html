@@ -1,15 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Document</title>
 </head>
+
+</head>
+
 <body>
-    
+
+
+  <div class="table-wrapper">
+    <div class="table-scroll">
+      <table id="teamsTable">
+        <tr>
+          <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
+          <th onclick="sortTable(0)">Id</th>
+          <th onclick="sortTable(1)">Country</th>
+          <th onclick="sortTable(1)">Alternative Name</th>
+          <th onclick="sortTable(0)">Fifa Code</th>
+          <th onclick="sortTable(0)">Group Id</th>
+          <th onclick="sortTable(1)">Group Letter</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="table-wrapper">
+      <div class="table-scroll">
+        <table id="groupTable">
+          <tr>
+            <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
+            <th onclick="sortTable(0)">Id</th>
+            <th onclick="sortTable(1)">Group Letter</th>
+            <th onclick="sortTable(1)">Group Teams</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+
+
 </body>
 
 <script src="LinksManager.js"></script>
+<script src="xmlHttpWraper.js"></script>
 <script src="main.js"></script>
+<script src="utils.js"></script>
+
+
 </html>
