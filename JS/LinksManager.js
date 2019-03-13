@@ -11,6 +11,6 @@ class LinksManager
     static getTeamsLink             ()      {  return teamsLink;            }
     static getgroupResults          ()      {  return groupResultsLink;     }
     static getcountryFifaCodeLink   (code)  {  return countryFifaCodeLink+code;  }
-    static getmatchesLink           ()      {  return matchesLink;          }
+    static getMatchesLink           ()      {  return matchesLink;          }
 
 }

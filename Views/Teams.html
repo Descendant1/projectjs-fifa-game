@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <title>FifaFufaFafa</title>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="./Index.html">
+                    Home
+                </a>
+                <a class="navbar-item" href="./Matches.html">
+                    Matches
+                </a>
+                <a class="navbar-item" href="./Tracking.html">
+                    Tracking
+                </a>
+            </div>
+    </nav>
+
+</head>
+
+</head>
+
+<body>
+        <div id ="Codes" style="margin: 5%" ></div>
+        <strong>Matches <br>Click on match to see stats</strong><br><br><br>
+        <input type="text" id="venueSearch" placeholder="Venue Place" onkeyup="inputKeyDownVenue(event)" />
+        <input type="text" id="winnerSearch" placeholder="Winner" onkeyup="inputKeyDownWinner(event)" />
+        <input type="text" id="stageSearch" placeholder="Stage" onkeyup="inputKeyDownStage(event)" />
+        <strong><br>If you want to search immediately by three parameters click button</strong>
+        <button onclick="Search()">Search by 3</button>
+        <div class="table-wrapper">
+                <div class="table-scroll">
+                    <table id="teamsTable" style="margin:1%;">
+
+                    </table>
+                </div>
+        </div>
+        <div class="modal" id="matchStatModal">
+                <div class="modal-background"
+                    onclick="document.getElementById('matchStatModal').classList.remove('is-active');"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p id="modalHeader" class="modal-card-title"></p>
+                    </header>
+                    <section id="modalBody" class="modal-card-body" style="display:inline-block">
+                        <div id="homeTeam" style="float:left;width:50%;"></div>
+                        <div id="awayTeam" style="float:right;width:50%;"></div>
+                    </section>
+                    <footer class="modal-card-foot">
+                        <button class="button is-success"
+                            onclick="document.getElementById('matchStatModal').classList.remove('is-active');">Close</button>
+                    </footer>
+                </div>
+            </div>
+</body>
+
+<script src="../JS/xmlHttpWraper.js"></script>
+<script src="../JS/LinksManager.js"></script>
+<script src="../JS/utils.js"></script>
+<script src="../JS/Tracker.js"></script>
+<script src="../JS/Teams.js"></script>
+
+
+
+</html>
