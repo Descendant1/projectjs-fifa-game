@@ -1,16 +1,15 @@
-const teamsLink             = 'http://worldcup.sfg.io/teams/';
-const groupResultsLink      = 'http://worldcup.sfg.io/teams/group_results';
-const countryFifaCodeLink   = 'http://worldcup.sfg.io/matches/country?fifa_code=';
-const matchesLink           = 'http://worldcup.sfg.io/matches';
+
+// To avoid links in the code 
 class LinksManager 
 {
-    constructor()
-    {
+    static teamsLink             = 'http://worldcup.sfg.io/teams/';
+    static groupResultsLink      = 'http://worldcup.sfg.io/teams/group_results';
+    static countryFifaCodeLink   = 'http://worldcup.sfg.io/matches/country?fifa_code=';
+    static matchesLink           = 'http://worldcup.sfg.io/matches';
 
-    }
-    static getTeamsLink             ()      {  return teamsLink;            }
-    static getgroupResults          ()      {  return groupResultsLink;     }
-    static getcountryFifaCodeLink   (code)  {  return countryFifaCodeLink+code;  }
-    static getMatchesLink           ()      {  return matchesLink;          }
+    static getTeamsLink             ()      {  return this.teamsLink;            }
+    static getgroupResults          ()      {  return this.groupResultsLink;     }
+    static getcountryFifaCodeLink   (code)  {  return this.countryFifaCodeLink+code;  }
+    static getMatchesLink           ()      {  return this.matchesLink;          }
 
 }

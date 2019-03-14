@@ -10,14 +10,15 @@
     cursor: pointer;
   }
 
-  th,
-  td {
+  th, td {
     text-align: left;
     padding: 1px;
   }
-  td p{
+
+  td p {
     margin: 1px;
   }
+
   tr:nth-child(even) {
     background-color: #f2f2f2
   }
@@ -31,14 +32,13 @@
   }
 
   .table-scroll {
-    height: 450px;
+    height: 650px;
     overflow: auto;
     margin-top: 20px;
   }
 
   .table-wrapper table {
     width: 100%;
-
   }
 
   .table-wrapper table thead th .text {
@@ -48,14 +48,43 @@
     height: 20px;
     width: 35%;
   }
+
   .modal-card, .modal-content {
     width: 70% !important;
-}
+  }
 
-.code{
-  display: inline-block;
-  padding: 1%;
-  margin: 3px;
-  background-color: cyan;
-  border-radius: 10px;
-}
+  .code {
+    display: inline-block;
+    padding: 1%;
+    margin: 3px;
+    background-color: cyan;
+    border-radius: 10px;
+  }
+
+  details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+  }
+
+  summary {
+    font-weight: bold;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+  }
+
+  details[open] {
+    padding: .5em;
+  }
+
+  details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+  }
+
+  .trackItem {
+    background-color: cyan;
+    border-radius: 20px;
+    padding: 1%;
+    margin: 1%;
+  }

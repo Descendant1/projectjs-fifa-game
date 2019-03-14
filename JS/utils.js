@@ -10,8 +10,3 @@ var formatDate = (date) => {
 }
 var clear = (elem) => elem.innerHTML = '';
 
-
-
-
-
-

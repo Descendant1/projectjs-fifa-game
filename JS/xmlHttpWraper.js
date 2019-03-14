@@ -1,3 +1,4 @@
+
 class Ajax 
 {
     static ajax = null;  

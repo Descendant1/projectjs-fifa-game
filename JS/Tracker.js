@@ -4,30 +4,37 @@ class Tracker {
         this.historyContainer = document.getElementById('trackHistory');
         this.trackingItems = localStorage.getItem('trIt') ? JSON.parse(localStorage.getItem('trIt')) : [];
         this.renderTrackHistory();
+
     }
 
-    track(action, func, datePerf) {
-        this.trackingItems.push({ action, func, datePerf });
+    track(action, func, datePerf, href) {
+        this.trackingItems.push({ action, func, datePerf, href });
     }
     getTrackItems() {
         return this.trackingItems;
     }
     renderTrackHistory() {
-        if (this.historyContainer) {
-            setInterval(() => {
-                if (this.trackingItems.length > 0) {
+        //setInterval(() => {
+            if (this.historyContainer) {
+                if (this.getTrackItems().length > 0) {
                     this.historyContainer.innerHTML = '<strong>Tracked actions till the moment</strong> <br>';
-
-                    this.trackingItems.map((trackItem) => {
-                        this.historyContainer.innerHTML += `${trackItem.action}  ${trackItem.func}  ${formatDate(new Date(trackItem.datePerf))} <br>`;
-                    })
-
-                    localStorage.setItem('trIt', JSON.stringify(this.trackingItems));
+                    this.getTrackItems().map((trackItem) => {
+                        var div = document.createElement('div');
+                        div.innerHTML += `${trackItem.action}  <br>Callee ${trackItem.func} 
+                                    <br>Date performed: ${formatDate(new Date(trackItem.datePerf))} 
+                                    <br>Href: ${trackItem.href} <br>`;
+                        div.classList.add('trackItem');
+                        this.historyContainer.appendChild(div);
+                    });
                 }
-            }, 500)
-        }
+        localStorage.setItem('trIt', JSON.stringify(this.getTrackItems()));
+
+            }
+      //  }, 500);
+
     }
 }
-var tracker = new Tracker();
+
+var tracker = tracker ? tracker : new Tracker();
 
 
